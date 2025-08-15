@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>IT Professional Qualities Quiz</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <style>
+    body { font-family: Arial; background: #f4f6f8; padding: 20px; max-width: 700px; margin: auto; }
+    h1 { text-align: center; color: #333; }
+    .input-group { margin-bottom: 20px; }
+    label { display: block; margin-bottom: 5px; font-weight: bold; }
+    input[type="text"] { width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc; }
+    .question { margin-bottom: 20px; background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .question h3 { margin-bottom: 10px; }
+    .options label { display: block; margin-bottom: 8px; cursor: pointer; }
+    button { display: block; margin: 30px auto; padding: 10px 20px; font-size: 16px; background: #0078d7; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    #result { margin-top: 30px; padding: 20px; background: #e0f7fa; border-left: 5px solid #0078d7; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <h1>Qualities of an IT Professional</h1>
+
+  <div class="input-group">
+    <label for="studentName">Student Name:</label>
+    <input type="text" id="studentName" placeholder="Enter your full name" />
+  </div>
+  <div class="input-group">
+    <label for="yearSection">Year & Section:</label>
+    <input type="text" id="yearSection" placeholder="e.g., BSIT 3A" />
+  </div>
+
+  <div id="quiz"></div>
+  <button onclick="submitQuiz()">Submit Quiz</button>
+  <div id="result"></div>
+  <button onclick="downloadPDF()" style="display:none;" id="downloadBtn">Download PDF Result</button>
+
+  <script>
+    let questions = [];
+    let traitDescriptions = {};
+    let finalTrait = "";
+    let finalDescription = "";
+
+    async function loadQuizData() {
+      const res = await fetch("q.json");
+      const data = await res.json();
+      questions = data.questions;
+      traitDescriptions = data.traits;
+      renderQuiz();
+    }
+
+    function renderQuiz() {
+      const quizDiv = document.getElementById("quiz");
+      quizDiv.innerHTML = "";
+      questions.forEach((q, index) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "question";
+        qDiv.innerHTML = `<h3>Q${index + 1}: ${q.text}</h3>`;
+        const optsDiv = document.createElement("div");
+        optsDiv.className = "options";
+        q.options.forEach((opt, i) => {
+          const inputId = `${q.id}_${i}`;
+          optsDiv.innerHTML += `
+            <label>
+              <input type="radio" name="${q.id}" value="${opt.trait}" id="${inputId}" />
+              ${opt.text}
+            </label>
+          `;
+        });
+        qDiv.appendChild(optsDiv);
+        quizDiv.appendChild(qDiv);
+      });
+    }
+
+    function submitQuiz() {
+      const name = document.getElementById("studentName").value.trim();
+      const section = document.getElementById("yearSection").value.trim();
+      if (!name || !section) {
+        alert("Please enter your name and year & section.");
+        return;
+      }
+
+      const traitCount = {};
+      questions.forEach(q => {
+        const selected = document.querySelector(`input[name="${q.id}"]:checked`);
+        if (selected) {
+          const trait = selected.value;
+          traitCount[trait] = (traitCount[trait] || 0) + 1;
+        }
+      });
+
+      if (Object.keys(traitCount).length < questions.length) {
+        alert("Please answer all questions.");
+        return;
+      }
+
+      finalTrait = Object.entries(traitCount).sort((a, b) => b[1] - a[1])[0][0];
+      finalDescription = traitDescriptions[finalTrait];
+
+      const resultDiv = document.getElementById("result");
+      resultDiv.innerHTML = `
+        <h2>Your IT Professional Profile:</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Year & Section:</strong> ${section}</p>
+        <p><strong>Profile:</strong> ${finalTrait} – ${finalDescription}</p>
+      `;
+      document.getElementById("downloadBtn").style.display = "block";
+    }
+
+    function downloadPDF() {
+      const name = document.getElementById("studentName").value.trim();
+      const section = document.getElementById("yearSection").value.trim();
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+      doc.setFontSize(16);
+      doc.text("IT Professional Qualities Quiz Result", 20, 20);
+      doc.setFontSize(12);
+      doc.text(`Name: ${name}`, 20, 35);
+      doc.text(`Year & Section: ${section}`, 20, 45);
+      doc.text(`Profile: ${finalTrait}`, 20, 60);
+      doc.text(finalDescription, 20, 70, { maxWidth: 170 });
+      doc.save(`${name.replace(/\s+/g, "_")}_IT_Profile.pdf`);
+    }
+
+    loadQuizData();
+  </script>
+</body>
+</html>
