@@ -1,0 +1,1 @@
+# IT-qualities-exam
