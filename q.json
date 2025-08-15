@@ -1,0 +1,192 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "text": "How do you approach a new technical challenge?",
+      "options": [
+        { "text": "Break it down and analyze each part", "trait": "Analytical" },
+        { "text": "Think outside the box for creative solutions", "trait": "Innovative" },
+        { "text": "Discuss it with peers to gather insights", "trait": "Collaborative" }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "When working on a team project, you usually...",
+      "options": [
+        { "text": "Take initiative and lead the planning", "trait": "Organized" },
+        { "text": "Support others and ensure everyone is heard", "trait": "Collaborative" },
+        { "text": "Focus on solving technical problems", "trait": "Analytical" }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "How do you handle unexpected bugs or errors?",
+      "options": [
+        { "text": "Stay calm and troubleshoot methodically", "trait": "Resilient" },
+        { "text": "Try unconventional fixes and test ideas", "trait": "Innovative" },
+        { "text": "Ask for help and share findings with the team", "trait": "Collaborative" }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "What’s your preferred way to learn new tech skills?",
+      "options": [
+        { "text": "Follow structured tutorials and documentation", "trait": "Organized" },
+        { "text": "Experiment and build projects hands-on", "trait": "Innovative" },
+        { "text": "Join study groups or forums", "trait": "Collaborative" }
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "How do you manage multiple deadlines?",
+      "options": [
+        { "text": "Use calendars and task lists to stay on track", "trait": "Organized" },
+        { "text": "Prioritize and adapt quickly to changes", "trait": "Resilient" },
+        { "text": "Coordinate with teammates to balance workload", "trait": "Responsible" }
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "What drives you to pursue a career in IT?",
+      "options": [
+        { "text": "Solving complex problems", "trait": "Analytical" },
+        { "text": "Creating innovative solutions", "trait": "Innovative" },
+        { "text": "Making technology accessible to others", "trait": "Responsible" }
+      ]
+    },
+    {
+      "id": "q7",
+      "text": "How do you respond to feedback?",
+      "options": [
+        { "text": "Reflect and improve based on suggestions", "trait": "Responsible" },
+        { "text": "Use it to spark new ideas", "trait": "Innovative" },
+        { "text": "Discuss it openly with the team", "trait": "Collaborative" }
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "Which role do you naturally take in group settings?",
+      "options": [
+        { "text": "Organizer and planner", "trait": "Organized" },
+        { "text": "Creative contributor", "trait": "Innovative" },
+        { "text": "Mediator and communicator", "trait": "Collaborative" }
+      ]
+    },
+    {
+      "id": "q9",
+      "text": "How do you stay productive during stressful times?",
+      "options": [
+        { "text": "Stick to routines and schedules", "trait": "Organized" },
+        { "text": "Stay flexible and adjust strategies", "trait": "Resilient" },
+        { "text": "Lean on team support and share tasks", "trait": "Collaborative" }
+      ]
+    },
+    {
+      "id": "q10",
+      "text": "What’s your biggest strength as an IT student?",
+      "options": [
+        { "text": "Logical thinking and analysis", "trait": "Analytical" },
+        { "text": "Creativity and innovation", "trait": "Innovative" },
+        { "text": "Teamwork and communication", "trait": "Collaborative" }
+      ]
+    },
+    {
+      "id": "q11",
+      "text": "How do you prepare for technical presentations?",
+      "options": [
+        { "text": "Organize content and rehearse thoroughly", "trait": "Organized" },
+        { "text": "Add visual flair and interactive elements", "trait": "Innovative" },
+        { "text": "Practice with peers and gather feedback", "trait": "Collaborative" }
+      ]
+    },
+    {
+      "id": "q12",
+      "text": "When facing a tight deadline, you...",
+      "options": [
+        { "text": "Focus and work efficiently under pressure", "trait": "Resilient" },
+        { "text": "Reprioritize tasks and adapt your plan", "trait": "Organized" },
+        { "text": "Communicate clearly with your team", "trait": "Responsible" }
+      ]
+    },
+    {
+      "id": "q13",
+      "text": "How do you ensure your code is reliable?",
+      "options": [
+        { "text": "Test thoroughly and debug systematically", "trait": "Analytical" },
+        { "text": "Use creative problem-solving to fix issues", "trait": "Innovative" },
+        { "text": "Ask for peer reviews and collaborate", "trait": "Collaborative" }
+      ]
+    },
+    {
+      "id": "q14",
+      "text": "What’s your approach to group conflicts?",
+      "options": [
+        { "text": "Mediate and find common ground", "trait": "Collaborative" },
+        { "text": "Stay calm and focus on solutions", "trait": "Resilient" },
+        { "text": "Take responsibility and clarify expectations", "trait": "Responsible" }
+      ]
+    },
+    {
+      "id": "q15",
+      "text": "How do you track your academic progress?",
+      "options": [
+        { "text": "Maintain a planner and checklist", "trait": "Organized" },
+        { "text": "Reflect on feedback and adjust goals", "trait": "Responsible" },
+        { "text": "Discuss progress with mentors or peers", "trait": "Collaborative" }
+      ]
+    },
+    {
+      "id": "q16",
+      "text": "What’s your mindset when learning new programming languages?",
+      "options": [
+        { "text": "Explore syntax and build small projects", "trait": "Innovative" },
+        { "text": "Study documentation and best practices", "trait": "Analytical" },
+        { "text": "Join coding communities and ask questions", "trait": "Collaborative" }
+      ]
+    },
+    {
+      "id": "q17",
+      "text": "How do you handle mistakes in your work?",
+      "options": [
+        { "text": "Own them and learn from the experience", "trait": "Responsible" },
+        { "text": "Find creative ways to fix and improve", "trait": "Innovative" },
+        { "text": "Talk it through with teammates", "trait": "Collaborative" }
+      ]
+    },
+    {
+      "id": "q18",
+      "text": "What’s your strategy for managing large projects?",
+      "options": [
+        { "text": "Break it into milestones and track progress", "trait": "Organized" },
+        { "text": "Innovate solutions to speed up delivery", "trait": "Innovative" },
+        { "text": "Coordinate with team and assign roles", "trait": "Responsible" }
+      ]
+    },
+    {
+      "id": "q19",
+      "text": "How do you stay motivated during long tasks?",
+      "options": [
+        { "text": "Set mini-goals and reward progress", "trait": "Organized" },
+        { "text": "Find new ways to make it interesting", "trait": "Innovative" },
+        { "text": "Work with others to stay accountable", "trait": "Collaborative" }
+      ]
+    },
+    {
+      "id": "q20",
+      "text": "What’s your attitude toward continuous learning?",
+      "options": [
+        { "text": "Always seek new knowledge and skills", "trait": "Responsible" },
+        { "text": "Adapt quickly to emerging technologies", "trait": "Resilient" },
+        { "text": "Share what you learn with others", "trait": "Collaborative" }
+      ]
+    }
+  ],
+  "traits": {
+    "Analytical": "You are a logical thinker who thrives on solving complex problems with precision and clarity. Your strength lies in breaking down challenges and approaching them with structured reasoning.",
+    "Innovative": "You bring fresh ideas and creativity to the table, always looking for better ways to do things. You enjoy experimenting, building solutions that push boundaries, and thinking beyond conventional approaches.",
+    "Collaborative": "You excel in teamwork, communication, and building strong relationships with peers. You believe that great results come from shared effort, mutual support, and open dialogue.",
+    "Organized": "You are structured and methodical, ensuring projects run smoothly and efficiently. You manage time and resources effectively, and help others stay on track with clear planning.",
+    "Resilient": "You stay calm under pressure and adapt quickly to changing circumstances. You’re dependable in tough situations, bounce back from setbacks, and maintain focus even when challenges arise.",
+    "Responsible": "You take ownership of your work and communicate clearly with stakeholders. You’re reliable, accountable, and focused on delivering quality outcomes while supporting your team’s success."
+  }
+}
